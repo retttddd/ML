@@ -1,0 +1,5 @@
+- [x] Data processing and normolizing 
+- [x] Saving trained data
+- [ ] ./ML and start traing model 
+- [ ] Forming a training pipeline 
+- [ ] Api
