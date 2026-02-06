@@ -12,7 +12,6 @@ class AbonementPredictor:
         self.encoder = None
         self.feature_names = None
 
-    # ---------- Training ----------
     def train(self, X_train, y_train):
         os.makedirs(os.path.dirname(self.model_path), exist_ok=True)
 
@@ -25,7 +24,6 @@ class AbonementPredictor:
         self.model.fit(X_train, y_train)
         return self.model
 
-    # ---------- Persistence ----------
     def save(self):
         if not self.model:
             raise ValueError("Train model before saving")
@@ -47,7 +45,6 @@ class AbonementPredictor:
         with open(f"{path}/feature_names.pkl", "rb") as f:
             self.feature_names = pickle.load(f)
 
-    # ---------- Prediction ----------
     def _prepare_input(self, data: dict):
         df = pd.DataFrame([data])
         df = pd.get_dummies(df)
@@ -73,7 +70,7 @@ class AbonementPredictor:
             "confidence": float(max(proba)),
         }
 
-    # ---------- Evaluation ----------
+
     def evaluate(self, X_test, y_test):
         preds = self.model.predict(X_test)
 

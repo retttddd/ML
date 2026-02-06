@@ -1,3 +1,10 @@
+## ML projekt zaliczeniowy
+Ivan  Stsepaniuk, ...,  .... \
+System predykcji typu abonamentu dla klientów siłowni. Model ML (76% accuracy) analizuje dane
+użytkowników (wiek, częstotliwość wizyt, czas w siłowni, korzystanie z trenera personalnego, sauny itp.)
+i rekomenduje odpowiedni abonament (Standard lub Premium)
+
+## TODO: 
 - [x] Data processing and normalizing
 - [x] Saving trained data
 - [x] Model training (Random Forest)
@@ -5,13 +12,6 @@
 - [x] Prediction script
 - [ ] API endpoint
 
-├── data/
-│   ├── processed/  (training artifacts)
-│   └── raw/        (gym_membership.csv)
-├── models/         (gym_model.pkl)
-├── src/
-│   ├── models/     (gym_model.py)
-│   └── processing/ (proccessing.py)
-├── main.py         (training pipeline)
-├── predict.py      (prediction script)
-└── README.md 
+## Graphs
+    Przykłady wag poszczególnych cech oraz ich dystrybucji.
+![analysis_graphs.png](data/analysis_graphs.png)
